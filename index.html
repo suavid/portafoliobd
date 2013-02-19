@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>Base de Datos I</title>
+	<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+	<body>
+		<script type="text/javascript">
+			function getDate(){ var f = new Date(); return f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear(); } 
+			$(document).ready(function(){ 
+				$("#contenido").load("contenido/portada.html",function(){ 
+				$("#fadeDiv").fadeIn(3000); $("#date").html("Fecha: "+getDate()); });
+				$("#m1").click(function(){ $("#contenido").load("contenido/portada.html",function(){ 
+				$("#fadeDiv").fadeIn(3000); $("#date").html("Fecha: "+getDate()); });});
+				$("#m2").click(function(){ $("#contenido").load("contenido/indice.html",function(){
+				$("#fadeDiv").fadeIn(3000); });});
+				$("#m3").click();
+				$("#m4").click();
+			});
+		</script>
+		<ul id="menu">
+			<li id="m1">Portada</li>
+			<li id="m2">Indice</li>
+			<li id="m3">Introducci&oacute;n</li>
+			<li id="m4">Objetivos </li>
+			<li id="m5">Marco Te&oacute;rico</li>
+			<li id="m6">Pr&aacute;cticas</li>
+			<li id="m7">Evaluaci&oacute;n</li>
+			<li id="m8">Conclusiones </li>
+			<li id="m9">Referencias</li>
+		</ul>
+		<noscript>Para visualizar correctamente esta p&aacute;gina web necesita habilitar javascript</noscript>
+		<div id="contenido"></div>
+	</body>
+</html> 
