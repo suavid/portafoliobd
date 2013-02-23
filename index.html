@@ -7,16 +7,22 @@
 </head>
 	<body>
 		<script type="text/javascript">
+			var refreshtime = 2000;
+			var path = "contenido/";
 			function getDate(){ var f = new Date(); return f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear(); } 
 			$(document).ready(function(){ 
-				$("#contenido").load("contenido/portada.html",function(){ 
-				$("#fadeDiv").fadeIn(3000); $("#date").html("Fecha: "+getDate()); });
-				$("#m1").click(function(){ $("#contenido").load("contenido/portada.html",function(){ 
-				$("#fadeDiv").fadeIn(3000); $("#date").html("Fecha: "+getDate()); });});
-				$("#m2").click(function(){ $("#contenido").load("contenido/indice.html",function(){
-				$("#fadeDiv").fadeIn(3000); });});
-				$("#m3").click();
-				$("#m4").click();
+				$("#contenido").load(path+"portada.html",function(){ 
+				$("#fadeDiv").fadeIn(refreshtime); $("#date").html("Fecha: "+getDate()); });
+				$("#m1").click(function(){ $("#contenido").load(path+"portada.html",function(){ 
+				$("#fadeDiv").fadeIn(refreshtime); $("#date").html("Fecha: "+getDate()); });});
+				$("#m2").click(function(){ $("#contenido").load(path+"indice.html",function(){
+				$("#fadeDiv").fadeIn(refreshtime); });});
+				$("#m3").click(function(){ $("#contenido").load(path+"introduccion.html",function(){
+				$("#fadeDiv").fadeIn(refreshtime); });});
+				$("#m4").click(function(){ $("#contenido").load(path+"objetivos.html",function(){
+				$("#fadeDiv").fadeIn(refreshtime); });});
+				$("#m5").click(function(){ $("#contenido").load(path+"marcoteorico.html",function(){
+				$("#fadeDiv").fadeIn(refreshtime); });});
 			});
 		</script>
 		<ul id="menu">
@@ -25,7 +31,13 @@
 			<li id="m3">Introducci&oacute;n</li>
 			<li id="m4">Objetivos </li>
 			<li id="m5">Marco Te&oacute;rico</li>
-			<li id="m6">Pr&aacute;cticas</li>
+			<li id="m6">Pr&aacute;cticas
+				<ul>
+					<li>Instalaci&oacute;n de SQL server 2008</li>
+					<li>Creaci&oacute;n de tablas RDBMS</li>
+					<li>Creaci&oacute;n de Base de Datos utilizando la sintaxis SQL</li>
+				</ul>
+			</li>
 			<li id="m7">Evaluaci&oacute;n</li>
 			<li id="m8">Conclusiones </li>
 			<li id="m9">Referencias</li>

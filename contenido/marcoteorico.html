@@ -1,0 +1,216 @@
+<div id="fadeDiv">
+<h1>Marco Teorico</h1>
+<hr />
+<p>Microsoft SQL Server es un sistema para la gestión de bases de datos producido por
+Microsoft basado en el modelo relacional. Sus lenguajes para consultas son T-SQL y
+ANSI SQL.
+</p>
+<p>
+En el manejo de SQL mediante líneas de comando se utiliza el SQLCMD
+Para el desarrollo de aplicaciones mas completas(3 o más capas) SQL Server incluye
+interfaces de acceso para varias plataformas de desarrollo, entre ellas. .NET. Sin
+embargo esta base de datos está disponible solo para Sistemas operativos Windows.
+</p>
+<p>
+Novedades de SQL Server 2008
+La nueva base de datos contiene mayor seguridad, integración con PowerShell, remueve
+la configuración del área expuesta (consola para configurar seguridad), encripción
+transparente de datos, auditoría de datos, compresión de datos, tiene correctores de
+sintaxis del lenguaje Transact-SQL e IntelliSense (una carácteristica del visual studio que
+permite a la base de datos sugerir objetos existentes mientras uno escribe la mitad de la
+palabra). Así mismo incluye nuevos tipos de datos y funciones. Entre ellos, datos
+espaciales, nuevos datos de tiempo (datetime2 y Datetimeoffset), tipos de datos
+jerárquicos.
+</p>
+<p>
+Los Sistemas Gestores de Bases de Datos Relacionales (RDBMS) avanzados actuales
+no solo guardan los datos; también los administran, restringiendo el tipo de datos que se
+puedan incluir en el sistema y también facilitando la obtención de datos que se
+encuentran fuera del sistema. Un RDBMS permite ir más allá del almacenamiento de
+datos hasta el campo de la definición, la apariencia que deben tener dichos datos o
+las reglas del negocio de los mismos.
+Con un RDBMS se pueden incorporar dichas reglas directamente en la integridad de la
+propia base de datos.
+</p>
+<p>
+Visión General de los objetos de una base de datos:
+Una RDBMS como SQL Server, contiene muchos objetos, pero se dice que los objetos de
+base de datos más importantes son:
+La propia Base de Datos
+El registro de transacciones
+Las tablas
+Los grupos de archivos
+Los diagramas
+Las vistas
+Los procedimientos almacenados
+Los índices y llaves primarias
+Las funciones definidas por el
+usuario
+Los informes
+Los catálogos de texto
+Los tipos de datos definidos por el
+usuario
+Los usuarios
+</p>
+<p>
+Objeto Base de Datos:
+La base de datos es el objeto de nivel más alto al que se puede hacer referencia
+en cualquier versión de SQL Server.
+Por regla general, una base de datos es un grupo que incluye, al menos, un
+conjunto de
+objetos de tabla y, con mucha frecuencia, otros objetos, como
+procedimientos almacenados, desencadenadores y vistas que pertenecen a una
+agrupación determinada de datos guardados en las tablas de la base de datos.
+Un RDBMS, como SQL Server, puede tener múltiples bases de datos de usuario en un
+solo servidor o puede tener una sola base de datos. La cantidad que resida en un
+solo SQL Server dependerá de factores como la capacidad (potencia de la CPU,
+limitaciones E/S del disco, memoria, etc.), la autonomía (una persona tiene derechos
+de administración para el servidor en el que se está ejecutando el sistema y otra persona
+tiene derechos de administración para un servidor diferente) o simplemente de cuántas
+base de datos tenga su empresa o su cliente.
+</p>
+<p>
+La primera vez que cargue SQL Server, tendrá cuatro bases de datos del sistema:
+master.
+model.
+msdb.
+tempdb.
+Para que el servidor se ejecute correctamente, tienen que instalarse todas. (De
+hecho, algunas no se ejecutarán si no están todas (instaladas).
+A continuación se listan algunos de los ejemplos de Base de Datos que se pueden
+descargar y trabajar con ellas:
+AdventureWorks(la base de datos ejemplo)
+AdventureWorksDW(ejemplo para utilizar con Análisis Services)
+Northwind
+pubs
+</p>
+<p>
+Instrucciones Fundamentales de Transact-SQL (T-SQL).
+
+En esta práctica se van a conocer las instrucciones de Transact-SQL más fundamentales.
+SQL es un lenguaje estándar utilizado para manipular y recuperar información de bases de datos relacionales, SQL (Structured Query Languaje) además le permite al programador o al administrador de la base de datos realizar las siguientes tareas:
+</p>
+<p>
+Modificar la estructura de la base de datos.
+Cambiar la configuración de seguridad del sistema.
+Agregar usuarios y permisos en bases de datos o tablas.
+Realizar consultas para recuperar información.
+Actualizar el contenido de una base de datos.
+</p>
+<p>
+En la nueva versión de SQL Server 2005, T-SQL se ha examinado, agregándole muchas instrucciones de programación nuevas. Entre otras cosas, se ha convertido para ser un  lenguaje común en tiempo de ejecución (CLR, Common Language Runtime), un lenguaje compatible; en resumen, ahora es un lenguaje .NET. Aunque para SQL Server 2005 podemos utilizar cualquier lenguaje .NET para acceder a la base de datos, al final se va a utilizar T-SQL y este sigue siendo el lenguaje principal en SQL Server.
+</p>
+<p>
+Tipos de Sentencias de T-SQL.
+
+Existen tres tipos de sentencias que se ejecutan en T-SQL y estas son:
+
+Sentencias de Lenguaje de Definición de Datos (LDD).
+Sentencias de Lenguaje de Control de Datos (LCD).
+Sentencias de Lenguaje de Manipulación de los datos (LMD).
+
+
+Lenguaje de Definición de Datos (LDD).
+
+Las sentencias de Definición de datos nos ayudan a definir todos los objetos de la base de  datos. Claro para poder hacer uso de estas sentencias se deben de tener los permisos adecuados.
+
+Algunas Sentencia LDD son:
+
+CREATE nombre_objeto
+ALTER nombre_objeto
+DROP nombre_objeto
+
+Lenguaje de Control de Datos (LCD)
+
+Estas sentencias son usadas para modificar los permisos asociados a un usuario o rol de la base de datos. Al igual que los LDD para poder ejecutar alguna de estas sentencias se deben tener los permisos adecuados.
+
+Sentencias LCD:
+
+GRANT
+DENY
+REVOKE
+
+Lenguaje de Manipulación de Datos (LMD)
+
+Las sentencias LMD trabajan con los datos en la base de datos. Estas sentencias se utilizan para insertar, modificar, eliminar y recuperar los datos.
+
+Sentencias LMD:
+
+INSERT
+UPDATE
+DELETE
+SELECT
+
+</p>
+<p>
+
+Instrucción CREATE 
+
+Vamos  a  examinar  la  estructura  completa  de  la  sentencia  CREATE  empezando  con  la  más general.  Descubrirá  que  las  instrucciones CREATE empiezan de la misma forma  y después dan paso a sus especificaciones. La primera parte de  CREATE será siempre igual:  
+
+ CREATE <tipo de objeto> <nombre del objeto> 
+ 
+A  esta  parte  le  seguirán  los  detalles,  que variarán  según  la  naturaleza  del  objeto  que  estemos creando. A continuación se presenta un listado de sintaxis más completa de CREATE: 
+
+
+CREATE  DATABASE 
+ 
+ CREATE DATABASE <nombre de base de datos> 
+  [ON [PRIMARY] 
+    ([NAME = <nombre lógico del archivo>,] 
+      FILENAME = <’nombre del archivo’> 
+    [, SIZE = <tamaño en Kilobytes, megabytes, gigabytes, o terabytes>] 
+    [,  MAXSIZE = <tamaño en Kilobytes, megabytes, gigabytes, o terabytes>] 
+    [, FILEGROWTH = <tamaño en Kilobytes, megabytes, gigabytes, o terabytes| porcentaje>] ) ] 
+  [LOG ON 
+([NAME = <nombre lógico del archivo>,] 
+      FILENAME = <’nombre del archivo’> 
+    [, SIZE = <tamaño en Kilobytes, megabytes, gigabytes, o terabytes>] 
+    [,  MAXSIZE = <tamaño en Kilobytes, megabytes, gigabytes, o terabytes>] 
+    [, FILEGROWTH = <tamaño en Kilobytes, megabytes, gigabytes, o terabytes| porcentaje>] ) ] 
+  [ COLLATE <nombre de intercalación> ] 
+
+Tenga  en cuenta  que algunas  de  las opciones  anteriores son mutuamente excluyentes (por ejemplo,  si está creando  para  anexar, la mayoría  de  las  opciones  que no  sean  ubicaciones de archivo  no  serán  válidas).  En  esta  sintaxis  hay mucho  que explicar,  por lo  que  vamos  a desglosarla en sus elementos. 
+
+</p>
+<p> 
+ON:
+ON  se  utiliza  en  dos  sitios  para  definir  la ubicación  del archivo  donde  se  almacenan los  datos (Archivo  .MDF)  y  para  definir la misma  información  para  el  lugar  donde  se guarda  el registro (Log de transacciones, archivo .LDF). Advertirá  aquí la inclusión  de la  palabra  clave  PRIMARY,  que  indica  que  lo  que  sigue  es  un  grupo  de  archivos primarios  (o  principales)  en  el  que  se  guardan  físicamente  los  datos.  También podemos guardar datos en los denominados grupos de archivos secundarios. 
+ </p>
+ <p>
+NAME:
+Éste  es  el  nombre  del  archivo  que  estamos  definiendo,  pero  sólo  es  un  nombre lógico,  es  decir,   el  nombre  que  va  a  utilizar  SQL  Server  internamente  para  hacer referencia a dicho archivo. 
+</p>
+<p>
+FILENAME:
+Éste es  el nombre físico del disco  del archivo del sistema operativo  real  en el  que se van  a guardar  los  datos y  el registro  (Log  de transacciones). El  valor predeterminado dependerá  de  si  estamos  tratando  con  la  propia  base  de  datos  o  con  el  Log  de transacciones.  De  forma  predeterminada,  el  archivo  se  ubicará  en  el  siguiente subdirectorio  \  Data  dentro  del  directorio  C:\  Archivos  de  programa  \  Microsoft 
+SQLServer \ MSSQL.1 \ MSSQL (o el directorio que  ha ya establecido como principal para SQL Server en la instalación). Si  estuviésemos  utilizando  el  archivo de  base  de datos físico,  se denominaría igual que nuestra  base de datos con una extensión .mdf y  si  estuviésemos  utilizando  el  registro,  tendría  el  mismo  nombre  que  el  archivo  de base de datos, pero con un sufijo _log y una extensión .ldf.  
+</p>
+<p>
+SIZE:
+Aquí  no  hay  ningún  misterio:  es  el  tamaño  de  la  base  de  datos. De  forma predeterminada,  el  tamaño  se  proporciona  en  megabytes,  pero  también  podemos hacer  que  se  proporcione  en  kilobytes  utilizando  KB  en  lugar  de  MB  tras  el  valor numérico  del  tamaño;  también  podemos  usar  un  tamaño  mucho  mayor  con  GB (gigabytes)  o  incluso  TB  (terabytes).  Tenga  en  cuenta  que  este  valor  debe  ser,   al menos, tan  alto como  el de la base de datos model y  debe ser un número  entero (sin decimales); en caso contrario recibiremos un error. Si no suministramos un valor para SIZE,  la  base  de  datos  tendrá  inicialmente  el  mismo  tamaño  que  el  de  la  base  de datos model.  
+</p>
+<p>
+MAXSIZE:
+Este  parámetro  es  una  pequeña  variante  del  parámetro  SIZE.  SQL  Server  tiene  un mecanismo  que  permite  a  nuestra  base  de  datos  asignar  automáticamente  un espacio  en  disco  adicional  (para  crecer)  cuando  sea  necesario.  MAXSIZE  es  el tamaño  máximo  al  que  puede  crecer  la  base  de  datos.  Una  vez  más,  de  forma predeterminada  se  proporciona  en megabytes,  como SIZE,  podemos utilizar  KB,  GB o TB para emplear cantidades de  incremento diferentes. La  pequeña  variante es  que no existe un valor predeterminado firme.
+</p>
+<p>
+Si nuestra  base  de  datos  (el archivo  .mdf) llega  al  valor establecido en  el  parámetro MAXSIZE,  nuestros  usuarios  empezarán  a  recibir  errores  indicando  que  sus inserciones  no  se  pueden  ejecutar.  Si  nuestro  registro  (Log  de  transacciones  .ldf) llega  a  su  tamaño  máximo,  no  podremos  ejecutar  ninguna  actividad  de  inicio  de sesión en la base de datos.  
+ </p>
+ <p>
+FILEGROWTH:
+Mientras  SIZE  establece el  tamaño inicial de la base  de datos  y MAXSIZE  determina exactamente  el  tamaño  máximo  que  puede  llegar  a  tener  el  archivo  de  la  base  de datos,  FILEGROWTH  determina básicamente  el  incremento del crecimiento  con  que se  puede  llegar  a  dicho  máximo.  Para  ello,  proporcionamos  un  valor  indicando  por cuantos  bytes  (en  KB,  MB,  GB,  o  TB)  a  la  vez  deseamos  aumentar  el  archivo.  Por ejemplo, si establecemos  un archivo de base de datos para que cuando llegue a 1GB incremente  en  un  valor  FILEGROWTH  de  un  20%,  la  primera  vez  que  se  expanda, aumentará hasta a 1.2GB, la segunda vez hasta 1.44GB y  así sucesivamente. 
+ </p>
+ <p>
+LOG ON:
+La  opción  LOG ON  nos permite  establecer  que deseamos  que  nuestro  registro  (Log de  transacciones)  se  dirija  a  un  conjunto  específico  de  archivos  y  dónde  se  deben ubicar  exactamente  dichos  archivos. Si  no  proporcionamos  esta  opción,  SQL  Server creará el  registro  (Log  de  transacciones)  en un  solo  archivo  y lo predeterminará para que tenga un tamaño igual al 25% del tamaño del archivo de datos. 
+ </p>
+ <p>
+TIPS: 
+Es muy recomendable que guarde sus  archivos de  registro ( .ldf) en  una  unidad  de  disco  diferente  a  la  de  sus  archivos  de  datos principales  (.mdf).  Al  hacerlo,  evitará  que  los  archivos  de  datos principal  y  de  registro  compitan  por  la  E/S  del  disco  además  de proporcionar una seguridad adicional si falla una unidad. 
+ </p>
+ <p>
+COLLATE:
+Esta  opción  tiene  que  ver  con  el  problema  de  la  ordenación,  las  mayúsculas  y minúsculas y  los acentos. Al instalar  su SQL Server, habrá decidido  sobre  cuál es  la intercalación predeterminada, pero puede sobrescribir este parámetro a nivel de base de datos y a nivel de columna. 
+</p>
+</div>

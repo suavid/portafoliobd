@@ -9,6 +9,12 @@ body{
 	background:#F2F2F2;
 }
 
+p{
+	margin-top:30px;
+	margin-right:10px;
+	text-align:justify;
+}
+
 #contenido{
 	border:solid 1px #A9D0F5;
 	margin-left:auto;
@@ -61,16 +67,48 @@ body{
 	width:100%;
 	height:auto;
 	position:fixed;
-	background:#000000;
+	background:#333333;
 	color:#ffffff;
 	top:0px;
 	z-index:1000;
 }
 
 #menu li{
+	display:block;
+	position:relative;
 	float:left;
 	padding-left:40px;
 	padding-top:5px;
 	padding-bottom:5px;
 	cursor:pointer;
 }
+
+#menu li:hover > ul{
+	display:block;
+}
+
+#menu ul{
+	position:absolute;
+	background:#333333;
+	width:300px;
+	display:none;
+}
+
+#menu ul li{
+	border-top:solid 1px #ffffff;
+}
+#menu ul li{
+	float:none;
+	display:block;
+	position:relative;
+}
+
+#menu ul li:hover{
+	background:#FE9A2E;
+	color:#000000;
+}
+
+h1{
+	font-size:15px;
+}
+
